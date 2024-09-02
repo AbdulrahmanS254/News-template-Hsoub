@@ -1,0 +1,31 @@
+@mixin btn-cstm($background-color, $color, $border) {
+    background-color: $background-color;
+    color: $color;
+    border: 1px solid $border;
+    border-radius: 5px;
+    padding: 5px 30px;
+    transition: all 0.4s allow-discrete;
+    text-decoration: none;
+    &:hover {
+        background-color: $color;
+        color: $background-color;
+    }
+}
+
+@mixin seciton-title($color, $bg-color) {
+    color: $color;
+    line-height: 50px;
+    font-weight: bold;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        right: -30px;
+        background-color: $bg-color;
+    }
+}
